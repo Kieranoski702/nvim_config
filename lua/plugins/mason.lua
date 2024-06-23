@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- Customize Mason plugins
 
 ---@type LazySpec
@@ -11,6 +9,8 @@ return {
     opts = {
       ensure_installed = {
         "lua_ls",
+        "ltex",
+        "texlab",
         -- add more arguments for adding more language servers
       },
     },
@@ -19,19 +19,19 @@ return {
   {
     "jay-babu/mason-null-ls.nvim",
     -- overrides `require("mason-null-ls").setup(...)`
-    opts = {
-      ensure_installed = {
-        "stylua",
-        -- add more arguments for adding more null-ls sources
-      },
-    },
+    -- opts = {
+    --   ensure_installed = {
+    --     "stylua",
+    --     -- add more arguments for adding more null-ls sources
+    --   },
+    -- },
   },
   {
     "jay-babu/mason-nvim-dap.nvim",
     -- overrides `require("mason-nvim-dap").setup(...)`
     opts = {
       ensure_installed = {
-        "python",
+        "cppdbg",
         -- add more arguments for adding more debuggers
       },
     },
