@@ -19,11 +19,10 @@ return {
   -- { import = "astrocommunity.pack.go" },
   -- { import = "astrocommunity.pack.java" },
   { import = "astrocommunity.pack.json" },
-  -- { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.markdown" },
   -- { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.python-ruff" },
-  { import = "astrocommunity.pack.rust" },
+  -- { import = "astrocommunity.pack.rust" },
   -- { import = "astrocommunity.pack.toml" },
   -- { import = "astrocommunity.pack.typescript" },
   -- { import = "astrocommunity.pack.yaml" },
@@ -32,8 +31,8 @@ return {
   -- { import = "astrocommunity.pack.terraform" },
   -- { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.cpp" },
-  -- { import = "astrocommunity.pack.cs" },
+  { import = "astrocommunity.pack.cs" },
   { import = "astrocommunity.pack.html-css" },
-  { import = "astrocommunity.markdown-and-latex.vimtex" },
+  -- { import = "astrocommunity.markdown-and-latex.vimtex" },
   -- import/override with your plugins folder
 }
