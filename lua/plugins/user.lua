@@ -123,6 +123,7 @@ return {
     version = "*",
     config = true,
   },
+  { "nicholasmata/nvim-dap-cs", dependencies = { "mfussenegger/nvim-dap" } },
 
   -- == Examples of Overriding Plugins ==
 

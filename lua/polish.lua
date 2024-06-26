@@ -31,3 +31,5 @@ dap.configurations.cs = {
     program = function() return vim.fn.input(vim.fn.getcwd() .. "/bin/Debug/", "file") end,
   },
 }
+
+require("dap-cs").setup()
