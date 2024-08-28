@@ -29,22 +29,22 @@ return {
   { "jbyuki/instant.nvim" },
   { "MunifTanjim/nui.nvim" },
   { "ShinKage/idris2-nvim" },
-  {
-    "jackMort/ChatGPT.nvim",
-    event = "VeryLazy",
-    config = function()
-      require("chatgpt").setup {
-        popup_input = {
-          submit = "<C-s>",
-        },
-      }
-    end,
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim",
-    },
-  },
+  -- {
+  --   "jackMort/ChatGPT.nvim",
+  --   event = "VeryLazy",
+  --   config = function()
+  --     require("chatgpt").setup {
+  --       popup_input = {
+  --         submit = "<C-s>",
+  --       },
+  --     }
+  --   end,
+  --   dependencies = {
+  --     "MunifTanjim/nui.nvim",
+  --     "nvim-lua/plenary.nvim",
+  --     "nvim-telescope/telescope.nvim",
+  --   },
+  -- },
   {
     "quarto-dev/quarto-nvim",
     opts = {
@@ -64,9 +64,24 @@ return {
       { "<localleader>qra", ":QuartoSendAll<cr>", desc = "quarto run all" },
       { "<localleader><cr>", ":SlimeSend<cr>", desc = "send code chunk" },
       { "<c-cr>", ":SlimeSend<cr>", desc = "send code chunk" },
-      { "<c-cr>", "<esc>:SlimeSend<cr>i", mode = "i", desc = "send code chunk" },
-      { "<c-cr>", "<Plug>SlimeRegionSend<cr>", mode = "v", desc = "send code chunk" },
-      { "<cr>", "<Plug>SlimeRegionSend<cr>", mode = "v", desc = "send code chunk" },
+      {
+        "<c-cr>",
+        "<esc>:SlimeSend<cr>i",
+        mode = "i",
+        desc = "send code chunk",
+      },
+      {
+        "<c-cr>",
+        "<Plug>SlimeRegionSend<cr>",
+        mode = "v",
+        desc = "send code chunk",
+      },
+      {
+        "<cr>",
+        "<Plug>SlimeRegionSend<cr>",
+        mode = "v",
+        desc = "send code chunk",
+      },
       { "<localleader>ctr", ":split term://R<cr>", desc = "terminal: R" },
       { "<localleader>cti", ":split term://ipython<cr>", desc = "terminal: ipython" },
       { "<localleader>ctp", ":split term://python<cr>", desc = "terminal: python" },
@@ -124,6 +139,27 @@ return {
     config = true,
   },
   { "nicholasmata/nvim-dap-cs", dependencies = { "mfussenegger/nvim-dap" } },
+  {
+    "yetone/avante.nvim",
+    event = "VeryLazy",
+    opts = {
+      -- add any opts here
+    },
+    dependencies = {
+      "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
+      "stevearc/dressing.nvim",
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+      --- The below is optional, make sure to setup it properly if you have lazy=true
+      {
+        "MeanderingProgrammer/render-markdown.nvim",
+        opts = {
+          file_types = { "markdown", "Avante" },
+        },
+        ft = { "markdown", "Avante" },
+      },
+    },
+  },
 
   -- == Examples of Overriding Plugins ==
 
